@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Открийте микроприключения в България - вдъхновяващи маршрути, събития и новини за любителите на природата.">
+    <meta name="keywords" content="микроприключения, България, природа, туризъм, приключения, планина, екопътеки">
+    <title>Микроприключения в България</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./static/tree_7265467.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<header>
+  <nav class="main-nav">
+    <div class="nav-logo">
+      <img src="./static/tree_7265467.png" alt="Logo">
+      <span class="nav-title">Микроприключения в България</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Начало</a></li>
+      <li><a href="za-nas.html">За нас</a></li>
+      <li><a href="priklyucheniya.html">Приключения</a></li>
+      <li><a href="novini.html">Новини</a></li>
+      <li><a href="galeriya.html">Галерия</a></li>
+      <li><a href="kontakt.html" class="btn-header">Свържи се с нас</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+    <h1>Предстоящи приключения</h1>
+    <div class="adventure-table-container">
+      <table class="adventure-table">
+        <thead>
+          <tr>
+            <th>Дестинация</th>
+            <th>Дата</th>
+            <th>Продължителност</th>
+            <th>Трудност</th>
+            <th>Свободни места</th>
+            <th>Действие</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="destination-info">
+              <div class="priklyucheniya"></div>
+                <img src="./static/Седемте-рилски-езера-приключения.jpg" alt="Седемте рилски езера" />
+                <div>
+                  <strong>Седемте рилски езера</strong><br />
+                <span>Еднодневен поход с гид</span>
+                </div>
+            </td>
+            <td>25 май 2025</td>
+            <td>8 часа</td>
+            <td>Средна</td>
+            <td>7 от 12</td>
+            <td><button class="btn-table" data-modal="rilskiezera">Запиши се</button></td>
+          </tr>
+          <tr>
+            <td class="destination-info">
+              <div class="priklyucheniya"></div>
+              <img src="./static/Чудните-мостове.jpg" alt="Чудните мостове" />
+              <div>
+                <strong>Чудните мостове</strong><br />
+                <span>Уикенд в Родопите</span>
+              </div>
+            </td>
+            <td>31 май - 2 юни 2025</td>
+            <td>3 дни</td>
+            <td>Лесна</td>
+            <td>4 от 10</td>
+            <td><button class="btn-table" data-modal="chudnitemostove">Запиши се</button></td>
+          </tr>
+          <tr>
+            <td class="destination-info">
+              <div class="priklyucheniya"></div>
+              <img src="./static/Връх-Вихрен.jpg" alt="Връх Вихрен" />
+              <div>
+                <strong>Връх Вихрен</strong><br />
+                <span>Покоряване на втория най-висок връх</span>
+              </div>
+            </td>
+            <td>14-15 юни 2025</td>
+            <td>2 дни</td>
+            <td>Трудна</td>
+            <td>9 от 9</td>
+            <td><button class="btn-table" data-modal="vihren">Запиши се</button></td>
+          </tr>
+          <tr>
+            <td class="destination-info">
+              <div class="priklyucheniya"></div>
+              <img src="./static/Побити-камъни.jpg" alt="Побитите камъни" />
+              <div>
+                <strong>Побитите камъни</strong><br />
+                <span>Разходка сред мистичната каменна гора край Варна</span>
+              </div>
+            </td>
+            <td>10 юли 2025</td>
+            <td>1 ден</td>
+            <td>Лесна</td>
+            <td>5 от 12</td>
+            <td><button class="btn-table" data-modal="pobitite-kamani">Запиши се</button></td>
+          </tr>
+          <tr>
+            <td class="destination-info">
+              <div class="priklyucheniya"></div>
+              <img src="./static/Дяволският-мост.jpg" alt="Дяволският мост" />
+              <div>
+                <strong>Дяволският мост</strong><br />
+                <span>Приключение до мистичния мост над река Арда</span>
+              </div>
+            </td>
+            <td>20 юли 2025</td>
+            <td>1 ден</td>
+            <td>Средна</td>
+            <td>6 от 10</td>
+            <td><button class="btn-table" data-modal="dyavolski-most">Запиши се</button></td>
+          </tr>
+          <tr>
+            <td class="destination-info">
+              <div class="priklyucheniya"></div>
+              <img src="./static/Скалните-църкви-край-Иваново.jpg" alt="Скалните църкви край Иваново" />
+              <div>
+                <strong>Скалните църкви край Иваново</strong><br />
+                <span>Открий средновековните храмове в скалите на Русенски Лом</span>
+              </div>
+            </td>
+            <td>5 август 2025</td>
+            <td>1 ден</td>
+            <td>Лесна</td>
+            <td>8 от 15</td>
+            <td><button class="btn-table" data-modal="ivanovo">Запиши се</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Модални форми за всяко приключение -->
+    <!-- Седемте рилски езера -->
+    <div class="modal-bg" id="modal-rilskiezera">
+      <div class="modal-form">
+        <button class="close-modal" title="Затвори">&times;</button>
+        <h2>Запиши се за Седемте рилски езера</h2>
+        <form class="signup-form">
+          <label>Име и фамилия <input type="text" name="name" required /></label>
+          <label>Имейл <input type="email" name="email" required /></label>
+          <label>Телефон <input type="tel" name="phone" required /></label>
+          <label>Брой участници
+            <select name="participants" required>
+              <option value="">Избери брой</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </label>
+          <label>Допълнителна информация
+            <textarea name="info" rows="2"></textarea>
+          </label>
+          <button type="submit">Изпрати записване</button>
+          <div class="success-message">Успешно записване! Ще се свържем с вас скоро.</div>
+        </form>
+      </div>
+    </div>
+    <!-- Чудните мостове -->
+    <div class="modal-bg" id="modal-chudnitemostove">
+      <div class="modal-form">
+        <button class="close-modal" title="Затвори">&times;</button>
+        <h2>Запиши се за Чудните мостове</h2>
+        <form class="signup-form">
+          <label>Име и фамилия <input type="text" name="name" required /></label>
+          <label>Имейл <input type="email" name="email" required /></label>
+          <label>Телефон <input type="tel" name="phone" required /></label>
+          <label>Брой участници
+            <select name="participants" required>
+              <option value="">Избери брой</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </label>
+          <label>Допълнителна информация
+            <textarea name="info" rows="2"></textarea>
+          </label>
+          <button type="submit">Изпрати записване</button>
+          <div class="success-message">Успешно записване! Ще се свържем с вас скоро.</div>
+        </form>
+      </div>
+    </div>
+    <!-- Връх Вихрен -->
+    <div class="modal-bg" id="modal-vihren">
+      <div class="modal-form">
+        <button class="close-modal" title="Затвори">&times;</button>
+        <h2>Запиши се за Връх Вихрен</h2>
+        <form class="signup-form">
+          <label>Име и фамилия <input type="text" name="name" required /></label>
+          <label>Имейл <input type="email" name="email" required /></label>
+          <label>Телефон <input type="tel" name="phone" required /></label>
+          <label>Брой участници
+            <select name="participants" required>
+              <option value="">Избери брой</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </label>
+          <label>Допълнителна информация
+            <textarea name="info" rows="2"></textarea>
+          </label>
+          <button type="submit">Изпрати записване</button>
+          <div class="success-message">Успешно записване! Ще се свържем с вас скоро.</div>
+        </form>
+      </div>
+    </div>
+    <!-- Побитите камъни -->
+    <div class="modal-bg" id="modal-pobitite-kamani">
+      <div class="modal-form">
+        <button class="close-modal" title="Затвори">&times;</button>
+        <h2>Запиши се за Побитите камъни</h2>
+        <form class="signup-form">
+          <label>Име и фамилия <input type="text" name="name" required /></label>
+          <label>Имейл <input type="email" name="email" required /></label>
+          <label>Телефон <input type="tel" name="phone" required /></label>
+          <label>Брой участници
+            <select name="participants" required>
+              <option value="">Избери брой</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </label>
+          <label>Допълнителна информация
+            <textarea name="info" rows="2"></textarea>
+          </label>
+          <button type="submit">Изпрати записване</button>
+          <div class="success-message">Успешно записване! Ще се свържем с вас скоро.</div>
+        </form>
+      </div>
+    </div>
+    <!-- Дяволският мост -->
+    <div class="modal-bg" id="modal-dyavolski-most">
+      <div class="modal-form">
+        <button class="close-modal" title="Затвори">&times;</button>
+        <h2>Запиши се за Дяволския мост</h2>
+        <form class="signup-form">
+          <label>Име и фамилия <input type="text" name="name" required /></label>
+          <label>Имейл <input type="email" name="email" required /></label>
+          <label>Телефон <input type="tel" name="phone" required /></label>
+          <label>Брой участници
+            <select name="participants" required>
+              <option value="">Избери брой</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </label>
+          <label>Допълнителна информация
+            <textarea name="info" rows="2"></textarea>
+          </label>
+          <button type="submit">Изпрати записване</button>
+          <div class="success-message">Успешно записване! Ще се свържем с вас скоро.</div>
+        </form>
+      </div>
+    </div>
+    <!-- Скалните църкви край Иваново -->
+    <div class="modal-bg" id="modal-ivanovo">
+      <div class="modal-form">
+        <button class="close-modal" title="Затвори">&times;</button>
+        <h2>Запиши се за Скалните църкви край Иваново</h2>
+        <form class="signup-form">
+          <label>Име и фамилия <input type="text" name="name" required /></label>
+          <label>Имейл <input type="email" name="email" required /></label>
+          <label>Телефон <input type="tel" name="phone" required /></label>
+          <label>Брой участници
+            <select name="participants" required>
+              <option value="">Избери брой</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </label>
+          <label>Допълнителна информация
+            <textarea name="info" rows="2"></textarea>
+          </label>
+          <button type="submit">Изпрати записване</button>
+          <div class="success-message">Успешно записване! Ще се свържем с вас скоро.</div>
+        </form>
+      </div>
+    </div>
+</main>
+
+<script>
+  // Отваряне на модалите
+  document.querySelectorAll('.btn-table').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const modalId = 'modal-' + btn.getAttribute('data-modal');
+      document.getElementById(modalId).classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  // Затваряне на модалите
+  document.querySelectorAll('.close-modal').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.closest('.modal-bg').classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  });
+
+  // Затваряне при клик извън формата
+  document.querySelectorAll('.modal-bg').forEach(bg => {
+    bg.addEventListener('click', e => {
+      if (e.target === bg) {
+        bg.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+
+  // Обработка на формите
+  document.querySelectorAll('.signup-form').forEach(form => {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const successMsg = form.querySelector('.success-message');
+      successMsg.style.display = 'block';
+      setTimeout(() => {
+        successMsg.style.display = 'none';
+        form.closest('.modal-bg').classList.remove('active');
+        document.body.style.overflow = '';
+        form.reset();
+      }, 2200);
+    });
+  });
+</script>
+
+<footer>
+    <div class="footer-content">
+      <ul class="footer-links">
+        <li><a href="index.html">Начало</a></li>
+        <li><a href="za-nas.html">За нас</a></li>
+        <li><a href="priklyucheniya.html">Приключения</a></li>
+        <li><a href="novini.html">Новини</a></li>
+        <li><a href="galeriya.html">Галерия</a></li>
+        <li><a href="kontakt.html">Контакт</a></li>
+      </ul>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/dayana_yordanova_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/badvibess10/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/in/dayanayordanova1/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <p>&copy; 2025 Микроприключения в България. Всички права запазени.</p>
+    </div>
+</footer>
+</body>
+</html>

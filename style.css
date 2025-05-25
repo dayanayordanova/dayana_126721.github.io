@@ -1,0 +1,992 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------- МЕНЮ ----------- */
+header {
+  background: #39593b;
+  border-bottom: 2px solid #e7e6e1;
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 54px;
+  margin: 0 auto;
+  padding: 1em 4em;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.13em;
+  color: #fff;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.nav-logo img {
+    height: 30px;
+    margin-right: 0.5em;
+}
+.nav-title {
+  font-weight: 700;
+  font-size: 1.07em;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.97em;
+  padding: 6px 22px;
+  border-radius: 18px;
+  transition: background 0.18s, color 0.18s;
+  background: none;
+  position: relative;
+}
+.nav-links a.active,
+.nav-links a:hover {
+  background: #588157;
+  color: #fff;
+}
+.nav-links .btn-header {
+  background: #588157;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 0.5em;
+  border-radius: 18px;
+  transition: background 0.18s, color 0.18s;
+}
+.nav-links .btn-header:hover {
+  background: #dcebd4;
+  color: #39593b;
+}
+@media (max-width: 900px) {
+  .main-nav { flex-direction: column; height: auto; padding: 8px 8px; }
+  .nav-links { margin-top: 8px; }
+  .nav-links a { padding: 6px 12px; font-size: 0.97em; }
+  .nav-logo { font-size: 1em; }
+}
+
+/* ----------- ОСНОВНИ СТИЛОВЕ ----------- */
+html, body {
+    background: #e7e6e1;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+main {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 2em 0;
+    min-height: 76vh;
+    background: none;
+}
+h1 {
+    color: #3a5a40;
+    text-align: center;
+}
+h2 {
+    font-size: 1.15em;
+    color: #588157;
+    text-align: center;
+}
+ul {
+    margin-bottom: 18px;
+}
+
+/* ----------- HERO ----------- */
+.hero {
+    background: linear-gradient(120deg, #a3b18a 60%, #e7e6e1 100%);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(60,60,60,0.07);
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+    min-height: 390px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-vacha {
+    background-image:
+        linear-gradient(rgba(34,49,63,0.55), rgba(34,49,63,0.55)),
+        url('./static/Vacha_Chilingira_4.10.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(34,49,63,0.60) 0%, rgba(163,177,138,0.15) 100%);
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.hero-content h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color:#fff;
+    text-shadow: 1px 2px 8px rgba(0,0,0,0.25);
+}
+.hero-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color:#fff;
+    text-shadow: 1px 2px 8px rgba(0,0,0,0.20);
+}
+.hero-content p {
+    font-size: 1.15em;
+    margin-bottom: 32px;
+    text-shadow: 1px 2px 8px rgba(0,0,0,0.18);
+}
+
+.hero-content a {
+    display: inline-block;
+    margin-top: 16px;
+    text-decoration: none;
+    color: #fff;
+}
+.btn-main {
+    padding: 12px 38px;
+    background: #235e25;
+    color: #fff;
+    border: none;
+    border-radius: 22px;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 2px 12px rgba(60,60,60,0.08);
+    cursor: pointer;
+}
+.btn-main:hover {
+    background: #2e7d32;
+    transform: translateY(-2px) scale(1.04);
+}
+
+.last-adventures {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.last-adventures h2 {
+    font-size: 2.5em;
+    color: #2e7d32;
+}
+
+.adventure-cards {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.adventure-card {
+    background: #f9f9f6;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(60,60,60,0.07);
+    padding: 1em 1.5em;
+    max-width: 310px;
+    min-width: 230px;
+    text-align: left;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+.adventure-card h3 {
+    font-size: 1.18em;
+    margin: 0.5em 0;
+    color: #39593b;
+}
+.adventure-card p {
+    font-size: 1em;
+    margin-bottom: 0;
+}
+
+/* ----------- ТАБЛИЦА ЗА ПРИКЛЮЧЕНИЯ ----------- */
+.adventure-table-container {
+    overflow-x: auto;
+    margin: 2rem 0;
+    box-shadow: 0 4px 24px rgba(60,60,60,0.07);
+    border-radius: 8px;
+}
+.adventure-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f9f9f6;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.adventure-table th {
+    background-color: #39593b;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+}
+.adventure-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: middle;
+}
+.adventure-table tbody tr:hover {
+    background-color: #f4f7f4;
+}
+.destination-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.destination-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.destination-info h4 {
+    margin-bottom: 0.3rem;
+    color: #39593b;
+}
+.destination-info p {
+    font-size: 0.85em;
+    color: #666;
+}
+.difficulty-indicator {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 500;
+}
+.difficulty-indicator.easy {
+    background-color: #e6f7ea;
+    color: #2e7d32;
+}
+.difficulty-indicator.medium {
+    background-color: #fff8e1;
+    color: #ff8f00;
+}
+.difficulty-indicator.hard {
+    background-color: #ffebee;
+    color: #c62828;
+}
+.btn-table {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #588157;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+.btn-table:hover {
+    background-color: #39593b;
+}
+
+/* ----------- НОВИНИ ----------- */
+.news-cards {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    margin-top: 40px;
+}
+.news-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(60,60,60,0.09);
+    padding: 32px 24px 24px 24px;
+    width: 340px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.news-type {
+    background: #588157;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 18px;
+    border-radius: 12px;
+    font-size: 1em;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.news-date {
+    color: #888;
+    font-size: 0.98em;
+    margin-bottom: 12px;
+    text-align: center;
+}
+.news-title {
+    font-size: 1.18em;
+    font-weight: bold;
+    color: #39593b;
+    margin-bottom: 12px;
+}
+.news-desc {
+    font-size: 1.05em;
+    margin-bottom: 18px;
+    color: #222;
+}
+.news-link {
+    color: #588157;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.news-link:hover {
+    color: #39593b;
+    text-decoration: underline;
+}
+
+.card-content {
+    background-color: #fff;
+    border-radius: 18px;
+    padding: 3em;
+}
+
+/* ----------- НОВИНА ДЕТАЙЛ ----------- */
+.news-detail-card, .news-detail {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(60,60,60,0.10);
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 36px 28px 28px 28px;
+}
+.back-link {
+    display: inline-block;
+    margin-top: 18px;
+    color: #588157;
+    text-decoration: none;
+    font-weight: 500;
+}
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* ----------- ГАЛЕРИЯ ----------- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    justify-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.gallery-subtitle {
+    text-align: center;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 24px;
+}
+.gallery-item {
+    position: relative;
+    width: 320px;
+    height: 210px;
+    border-radius: 22px;
+    overflow: hidden;
+    background: #eee;
+    box-shadow: 0 4px 24px rgba(60,60,60,0.10);
+    transition: transform 0.2s;
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(0deg, rgba(34,49,63,0.72) 0%, rgba(34,49,63,0.0) 100%);
+    color: #fff;
+    padding: 18px 16px 12px 16px;
+    text-align: left;
+}
+.gallery-overlay h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.15em;
+}
+a.gallery-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ----------- ABOUT (ЗА НАС) ----------- */
+.about-header, .about-content, .why-us, .testimonials {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about-header h1,
+.about-header .subtitle {
+    text-align: center;
+}
+
+.about-header h1 {
+    margin: 0 0 1em 0;
+    font-size: 2.2em;
+    color: #39593b;
+}
+.about-text {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 700px;
+}
+
+.about-content {
+    background-color: #fff;
+    border-radius: 18px;
+    padding: 3em;
+}
+
+.about-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-content .subtitle {
+    font-size: 2em;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    font-weight: 600;
+}
+.btn-outline {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 26px;
+    border: 2px solid #39593b;
+    border-radius: 22px;
+    background: none;
+    color: #39593b;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s, color 0.3s;
+}
+.btn-outline:hover {
+    background: #39593b;
+    color: #fff;
+}
+
+.why-us {
+    margin: 1.5em;
+}
+.why-us h2,
+.testimonials h2 {
+    text-align: center;
+    font-size: 2em;
+}
+.why-cards {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+.why-card {
+    background: #f9f9f6;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(60,60,60,0.07);
+    padding: 18px 12px;
+    text-align: center;
+    width: 220px;
+}
+.why-card img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.why-card p {
+    font-size: 1.07em;
+    font-weight: 500;
+}
+.testimonials-list {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 1em;
+}
+.testimonial {
+    background: #f9f9f6;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(60,60,60,0.07);
+    padding: 16px 20px;
+    max-width: 320px;
+    font-size: 1em;
+    font-style: italic;
+    text-align: center;
+}
+.testimonial span {
+    display: block;
+    margin-top: 10px;
+    color: #588157;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* ----------- КОНТАКТИ ----------- */
+body {
+  background: #e5e4db;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ... меню и footer стила остават ... */
+
+main {
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  padding: 30px 16px 70px 16px;
+}
+
+.contact-title {
+  text-align: center;
+  color: #39593b;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-size: 2em;
+}
+.contact-subtitle {
+  text-align: center;
+  color: #222;
+  margin-bottom: 32px;
+  font-size: 1.08em;
+}
+
+.contact-cards {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+.contact-card {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 4px 24px rgba(60,60,60,0.09);
+  padding: 32px 28px 24px 28px;
+  min-width: 260px;
+  max-width: 350px;
+  flex: 1 1 260px;
+  margin-bottom: 18px;
+}
+.contact-card h2 {
+  color: #39593b;
+  font-size: 1.18em;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+.contact-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.contact-card ul li {
+  margin-bottom: 8px;
+  color: #222;
+  font-size: 1.05em;
+}
+.contact-card a {
+  color: #588157;
+  text-decoration: none;
+}
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+.form-card {
+  max-width: 420px;
+  margin: 0 auto 36px auto;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.contact-form label {
+  font-weight: 500;
+  color: #39593b;
+  margin-top: 6px;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1.2px solid #b6a998;
+  background: #f6f0ea;
+  font-size: 1em;
+  margin-bottom: 7px;
+  margin-top: 2px;
+  resize: vertical;
+}
+.contact-form textarea {
+  min-height: 70px;
+  font-family: inherit;
+}
+.contact-form button {
+  background: #6b9362;
+  color: #fff;
+  border: none;
+  border-radius: 18px;
+  padding: 13px 0;
+  font-size: 1.13em;
+  font-weight: bold;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.contact-form button:hover {
+  background: #39593b;
+}
+
+/* ----------- RESPONSIVE ----------- */
+@media (max-width: 1100px) {
+    .adventure-cards, .why-cards, .testimonials-list, .news-cards, .gallery-grid, .contact-info {
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+    }
+    .why-card, .testimonial, .news-card, .info-block, .adventure-card {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    main {
+        padding: 16px 4vw 60px 4vw;
+    }
+    .gallery-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+    .main-nav {
+        padding: 1em 2vw;
+    }
+    .nav-links {
+        margin-top: 1em;
+    }
+    .nav-links li {
+        margin: 0.5em 0;
+    }
+    .hero {
+        padding: 1em 2vw;
+    }
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    .contact-cards {
+        flex-direction: column;
+    }
+    .contact-card {
+        margin-bottom: 2em;
+    }
+    .adventure-table-container {
+        overflow-x: auto;
+    }
+    .adventure-table {
+        width: 100%;
+        min-width: 600px; /* За да не се смачква таблицата прекалено */
+    }
+    .adventure-table th,
+    .adventure-table td {
+        padding: 0.75rem;
+        font-size: 0.9em;
+    }
+    .news-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .news-card {
+        width: 90%;
+        max-width: 400px;
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .gallery-item {
+        width: 95vw;
+        max-width: 400px;
+        height: 250px;
+    }
+
+    /* Футър */
+    footer {
+        background: #39593b; /* Промяна: тъмно сив цвят */
+        color: #fff;
+        padding: 1em 2vw;
+    }
+
+    .footer-content {
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-links li {
+        margin: 0.5em 0;
+        list-style: none;
+    }
+
+    .footer-links a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .footer-socials {
+        justify-content: center;
+        margin-top: 1em;
+    }
+
+    .footer-socials a {
+        color: #fff;
+        background: #588157;
+    }
+
+    .footer-socials a:hover {
+        background: #dcebd4;
+        color: #39593b;
+    }
+}
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 1.75em;
+    }
+    .hero-content h2 {
+        font-size: 1.25em;
+    }
+    .adventure-table th,
+    .adventure-table td {
+        padding: 0.5rem;
+        font-size: 0.8em;
+    }
+}
+@media (max-width: 768px) {
+    /* ... други стилове ... */
+
+    /* Страница "За нас" */
+    .about-content {
+        padding: 1.5em; /* Намаляване на padding за по-малки екрани */
+        box-sizing: border-box; /* Важно: включва padding в ширината */
+    }
+
+    .about-text {
+        max-width: 100%; /* Позволява на текста да заеме цялата ширина */
+        text-align: left; /* Подравняване на текста вляво за по-добра четимост */
+    }
+}
+
+/* ----------- МОДАЛНИ СТИЛОВЕ ----------- */
+.modal-bg {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(34,49,63,0.55);
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.2s;
+    padding: 2em;
+}
+.modal-bg.active {
+    display: flex;
+
+}
+.modal-form {
+    background: #fff;
+    border-radius: 14px;
+    padding: 2em 1.5em;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 8px 32px rgba(34,49,63,0.18);
+    position: relative;
+}
+.close-modal {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    background: none;
+    border: none;
+    font-size: 1.7em;
+    color: #39593b;
+    cursor: pointer;
+}
+.success-message {
+    display: none;
+    color: #3a5a40;
+    margin-top: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+.modal-form form.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1em;
+}
+
+.signup-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    color: #39593b;
+    margin-bottom: 0.2em;
+    font-size: 1em;
+}
+
+.signup-form input,
+.signup-form select,
+.signup-form textarea {
+    margin-top: 0.4em;
+    padding: 10px 14px;
+    border: 1px solid #b7c2b7;
+    border-radius: 14px;
+    font-size: 1em;
+    font-family: inherit;
+    background: #f7faf7;
+    transition: border 0.2s;
+}
+
+.signup-form input:focus,
+.signup-form select:focus,
+.signup-form textarea:focus {
+    border: 1.5px solid #588157;
+    outline: none;
+    background: #fff;
+}
+
+.signup-form button[type="submit"] {
+    margin-top: 0.6em;
+    background: #588157;
+    color: #fff;
+    border: none;
+    border-radius: 18px;
+    padding: 12px 0;
+    font-weight: 700;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 2px 12px rgba(60,60,60,0.08);
+}
+
+.signup-form button[type="submit"]:hover {
+    background: #39593b;
+    transform: translateY(-2px) scale(1.04);
+}
+
+.signup-form textarea {
+    resize: vertical;
+    min-height: 48px;
+    max-height: 120px;
+}
+
+/* ----------- FOOTER ----------- */
+footer {
+    background: #39593b;
+    color: #fff;
+    padding: 2em 0;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+}
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.footer-links li {
+    margin: 0 1em;
+}
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.footer-links a:hover {
+    color: #dcebd4;
+}
+.footer-socials {
+    display: flex;
+    align-items: center;
+}
+.footer-socials a {
+    display: inline-block;
+    color: #fff;
+    background: #588157;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    margin: 0 8px;
+    font-size: 1.3em;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    text-align: center;
+}
+.footer-socials a:hover {
+    background: #dcebd4;
+    color: #39593b;
+    transform: translateY(-2px) scale(1.08);
+}
+footer p {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 0.9em;
+    color: #dcebd4;
+}
+
+
